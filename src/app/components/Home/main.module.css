@@ -1,0 +1,29 @@
+.head {
+    
+    background-color: #55e768;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.main {
+    background-color: rgb(68, 111, 205);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly
+}
+
+.foot {
+    background-color: rgb(89, 82, 88);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;   
+}
+
+.slide {
+    background-color: rgb(114, 55, 105);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
