@@ -1,25 +1,78 @@
 .head {
-    
-    background-color: #55e768;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
-}
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ff6f61; 
+    padding: 1rem 0;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+   
+  }
+
+  .nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:5rem;
+    padding: 1rem 0;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+   
+  }
+
+  .head div {
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+  }
+  
+  .line {
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
 
 .main {
-    background-color: rgb(68, 111, 205);
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly
-}
+    justify-content: space-around;
+    align-items: center;
+    padding: 4rem 2rem;
+    flex-wrap: wrap;
+    background-color: rgba(243, 238, 230, 0.95);
+  }
+
+
+.main h1 {
+    max-width: 600px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .main div {
+    flex: 1;
+  }
 
 .foot {
-    background-color: rgb(89, 82, 88);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;   
-}
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+    border-top: 5px solid #ff6f61;
+  }
+
+
+.foot h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .foot p {
+    margin: 0.2rem 0;
+  }
 
 .slide {
     background-color: rgb(114, 55, 105);

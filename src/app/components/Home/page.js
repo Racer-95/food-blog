@@ -7,16 +7,21 @@ export default function Mainpage () {
 
       <header className={styles.head}>
         <div>Tasty-Trail</div>
-        <div>Home</div>
-        <div>Blogs</div>
-        <div>Top Rated</div>
-        <div>About Us</div>
+        <div className={styles.nav}>
+            <div>Home</div>
+            <div>Blogs</div>
+            <div>Top Rated</div>
+            <div>About Us</div>
+        </div>
       </header>
+
+      <div className={styles.line}>
+        <h1>Serving Stories on a Plate - Where Every Bite Tells a Tale.</h1>
+      </div>
 
       <div className={styles.main}>
         <div>
             <h1>Welcome to Tasty-Trail one stop for all your Recipes</h1>
-            <h1>Serving Stories on a Plate - Where Every Bite Tells a Tale.</h1>
         </div>
         <Image src="/food1.jpg" alt="food image" width={600} height={300} />
       </div>
