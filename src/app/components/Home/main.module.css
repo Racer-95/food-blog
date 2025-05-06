@@ -56,6 +56,17 @@
     flex: 1;
   }
 
+.slide {
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+}
+
+.card {
+    background-color:rgba(243, 238, 230, 0.95);
+}
+
 .foot {
     background-color: #333;
     color: white;
@@ -63,6 +74,20 @@
     padding: 2rem 1rem;
     margin-top: 2rem;
     border-top: 5px solid #ff6f61;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));   
+}
+
+  .foot ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .foot ul li {
+    margin-bottom: 10px;
+    color: #9ebcef;
+    cursor: pointer;
+    transition: color 0.3s;
   }
 
 
@@ -73,10 +98,3 @@
   .foot p {
     margin: 0.2rem 0;
   }
-
-.slide {
-    background-color: rgb(114, 55, 105);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-}
