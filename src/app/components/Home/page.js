@@ -1,8 +1,15 @@
+"use client";
+
+
 import Image from 'next/image'
 import styles from './main.module.css';
-import {data} from '../data.js'
+import { useContext } from 'react';
+import {foodContext} from '../../data.js'
+
 export default function Mainpage () {
-    console.log(data)
+
+  const foodData = useContext(foodContext)
+  console.log(foodData)
     return (
     <div>
 
@@ -18,7 +25,7 @@ export default function Mainpage () {
       </header>
 
       <div className={styles.line}>
-        <h1>Serving Stories on a Plate - Where Every Bite Tells a Tale.</h1>
+        <h1>Serving Stories on a Plate - Where Every Bite Tells a Tale</h1>
       </div>
 
       <div className={styles.main}>
@@ -28,27 +35,48 @@ export default function Mainpage () {
         <Image src="/food1.jpg" alt="food image" width={600} height={300} />
       </div>
 
+     
       <div className={styles.slide}>
         <h2>You may like</h2>
-        <div className={styles.card}>
-            <p>{data[0].name}</p>
-            <img src={data[0].image} width={60} height={30}></img>
-        </div>
         <button>See All</button>
       </div>
+
+      <div className={styles.cardrow}>
+        <div className={styles.card}>
+          <img  src='https://cdn.dummyjson.com/recipe-images/5.webp' width={180} height={200}></img>
+          <h3>name</h3>
+          <p>cusine</p>
+          <p>difficulty</p>
+        </div>
+
+        <div className={styles.card}>
+          <img src='https://cdn.dummyjson.com/recipe-images/5.webp' width={180} height={200}></img>
+          <h3>name2</h3>
+          <p>cusine2</p>
+          <p>difficulty2</p>
+        </div>
+
+        <div className={styles.card}>
+          <img src='https://cdn.dummyjson.com/recipe-images/5.webp' width={180} height={200}></img>
+          <h3>name3</h3>
+          <p>cusine3</p>
+          <p>difficulty3</p>
+        </div>
+      </div>
+     
 
       
       <footer className={styles.foot}>
         <div>
             <h2>Tasty-Trail</h2>
-            <p>At TastyBites, we bring you delicious recipes, food stories, and culinary adventures from around the world. Cook with love, eat with joy!</p>
+            <p>At Tasty-Trail, we bring you delicious recipes, food stories, and culinary adventures from around the world. Cook with love, eat with joy!</p>
         </div>
         
         <div>
             <h3>Links</h3>
             <ul>
                 <li>Home</li>
-                <li>Bolgs</li>
+                <li>Blogs</li>
                 <li>About Us</li>
             </ul>
         </div>
