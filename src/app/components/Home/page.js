@@ -6,10 +6,20 @@ import styles from './main.module.css';
 import { useContext } from 'react';
 import {foodContext} from '../../data.js'
 
+
 export default function Mainpage () {
 
   const foodData = useContext(foodContext)
   console.log(foodData)
+
+  if (!foodData) {
+    return <p>Loading...</p>
+  }
+
+  if (!foodData.recipes || foodData.recipes.length === 0) {
+    return <p>No recipes found.</p>;
+  }
+
     return (
     <div>
 
@@ -42,26 +52,15 @@ export default function Mainpage () {
       </div>
 
       <div className={styles.cardrow}>
-        <div className={styles.card}>
-          <img  src='https://cdn.dummyjson.com/recipe-images/5.webp' width={180} height={200}></img>
-          <h3>name</h3>
-          <p>cusine</p>
-          <p>difficulty</p>
-        </div>
-
-        <div className={styles.card}>
-          <img src='https://cdn.dummyjson.com/recipe-images/5.webp' width={180} height={200}></img>
-          <h3>name2</h3>
-          <p>cusine2</p>
-          <p>difficulty2</p>
-        </div>
-
-        <div className={styles.card}>
-          <img src='https://cdn.dummyjson.com/recipe-images/5.webp' width={180} height={200}></img>
-          <h3>name3</h3>
-          <p>cusine3</p>
-          <p>difficulty3</p>
-        </div>
+          {foodData.recipes.slice(0, 6).map(recipe => (
+            <div className={styles.card} key={recipe.id}>
+              <img  src={recipe.image} width={200} height={200}></img>
+              <h3>{recipe.name}</h3>
+              <p><strong>Cuisine:</strong> {recipe.cuisine}</p>
+              <p><strong>Prep Time:</strong> {recipe.prepTimeMinutes} Minutes</p>
+              <p><strong>Rating:</strong> {recipe.rating}</p>
+            </div>
+          ))}      
       </div>
      
 
