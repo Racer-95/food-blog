@@ -2,7 +2,7 @@
 
 import styles from './box.module.css';
 import { useContext } from 'react';
-import {foodContext} from '../../data.js'
+import {foodContext} from '../data.js'
 
 
 export default function Boxpage () {

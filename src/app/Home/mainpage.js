@@ -4,7 +4,8 @@
 import Image from 'next/image'
 import styles from './main.module.css';
 import { useContext } from 'react';
-import {foodContext} from '../../data.js'
+import {foodContext} from '../data.js'
+import Link from 'next/link'
 
 
 export default function Mainpage () {
@@ -48,7 +49,7 @@ export default function Mainpage () {
      
       <div className={styles.slide}>
         <h2>You may like</h2>
-        <button>See All</button>
+        <Link href='/boxpage'><button>See All</button></Link>
       </div>
 
       <div className={styles.cardrow}>
