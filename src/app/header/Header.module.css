@@ -1,0 +1,27 @@
+.head {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ff6f61; 
+    padding: 1rem 0;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap:5rem;
+    padding: 1rem 0;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+ 
+}
+
+.head div {
+    cursor: pointer;
+}
