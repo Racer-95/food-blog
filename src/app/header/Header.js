@@ -14,7 +14,10 @@ export default function head () {
                     <div>Home</div>
                 </Link>
 
-                <div>Blogs</div>
+                <Link href='/boxpage' style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <div>Blogs</div>
+                </Link>
+                
                 <div>Top Rated</div>
 
                 <Link href='/aboutpage' style={{ textDecoration: 'none', color: 'inherit' }}>

@@ -1,8 +1,15 @@
 .head {
+    position: fixed;
+    /* Stick to top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background-color: #ff6f61; 
+    background-color: #ff6f61;
     padding: 1rem 0;
     color: white;
     font-size: 1.2rem;
@@ -14,12 +21,11 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap:5rem;
+    gap: 5rem;
     padding: 1rem 0;
     color: white;
     font-size: 1.2rem;
     font-weight: bold;
- 
 }
 
 .head div {
