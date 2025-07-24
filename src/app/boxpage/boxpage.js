@@ -4,6 +4,7 @@ import styles from './box.module.css';
 import { useContext } from 'react';
 import { foodContext } from '../data.js'
 import Link from 'next/link';
+import Image from 'next/image';
 
 
 export default function Boxpage() {
@@ -25,7 +26,7 @@ export default function Boxpage() {
                 {foodData.recipes.map(recipe => (
                     <Link href={`/recipe/${recipe.id}`} key={recipe.id} style={{ textDecoration: 'none', color: 'inherit' }}>
                         <div className={styles.card} key={recipe.id}>
-                            <img src={recipe.image} width={250} height={200}></img>
+                            <Image src={recipe.image} width={250} height={200} alt={recipe.name} />
                             <h3>{recipe.name}</h3>
                             <p><strong>Cuisine:</strong> {recipe.cuisine}</p>
                             <p><strong>Prep Time:</strong> {recipe.prepTimeMinutes} Minutes</p>

@@ -6,10 +6,10 @@ export default function AboutPage() {
             <h1>About Us</h1>
             <h2>Welcome to Tasty Trail - your delicious guide through the world of flavors!</h2>
             <p>
-                At Tasty Trail, we believe food is more than just a meal - it's a journey. Whether it's a cozy homemade recipe, a street-side gem, or an exotic dish from across the globe, we're here to explore it all and share it with you.
+                At Tasty Trail, we believe food is more than just a meal - it&apos;s a journey. Whether it&apos;s a cozy homemade recipe, a street-side gem, or an exotic dish from across the globe, we&apos;re here to explore it all and share it with you.
             </p>
             <p>
-                This blog started with a simple idea: to document the joy of discovering new tastes and sharing them with fellow food lovers. From traditional comfort food to exciting culinary experiments, we're on a mission to inspire your kitchen adventures and satisfy your foodie curiosity.
+                This blog started with a simple idea: to document the joy of discovering new tastes and sharing them with fellow food lovers. From traditional comfort food to exciting culinary experiments, we&apos;re on a mission to inspire your kitchen adventures and satisfy your foodie curiosity.
             </p>
             <h3 className={styles.subheading}>Our Mission</h3>
             <p>
@@ -17,7 +17,7 @@ export default function AboutPage() {
             </p>
             <h3 className={styles.subheading}>Join the Tasty Trail!</h3>
             <p>
-                Follow us for mouthwatering updates, behind-the-scenes content, and more. Let's make every meal an experience to remember.
+                Follow us for mouthwatering updates, behind-the-scenes content, and more. Let&apos;s make every meal an experience to remember.
             </p>
         </div>
     );

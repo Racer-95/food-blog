@@ -42,7 +42,7 @@ export default function Mainpage() {
       <div className={styles.cardrow}>
         {foodData.recipes.slice(0, 4).map(recipe => (
           <div className={styles.card} key={recipe.id}>
-            <img src={recipe.image} width={200} height={200}></img>
+            <Image src={recipe.image} width={200} height={200} alt={recipe.name} />
             <h3>{recipe.name}</h3>
             <p><strong>Cuisine:</strong> {recipe.cuisine}</p>
             <p><strong>Prep Time:</strong> {recipe.prepTimeMinutes} Minutes</p>

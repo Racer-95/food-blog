@@ -6,6 +6,7 @@ import { foodContext } from '../../data.js';
 import styles from './recipe.module.css';
 import Footer from '../../footer/Footer.js';
 import Header from '../../header/Header.js';
+import Image from 'next/image';
 
 export default function RecipeDetail() {
   const params = useParams();
@@ -25,7 +26,7 @@ export default function RecipeDetail() {
 
       <div className={styles.container}>
         <div className={styles.card}>
-          <img src={recipe.image} width={400} height={300} className={styles.image} />
+          <Image src={recipe.image} width={400} height={300} className={styles.image} alt={recipe.name} />
           <div className={styles.content}>
             <h1 className={styles.title}>{recipe.name}</h1>
             <p><strong>Cuisine:</strong> {recipe.cuisine}</p>
