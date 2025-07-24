@@ -1,5 +1,5 @@
 import DataFetcher from '../data.js';
-import Boxpage from './boxpage'; 
+import Boxpage from './boxpage.js'; 
 import Footer from '../footer/Footer.js'
 import Header from '../header/Header.js'
 

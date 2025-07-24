@@ -1,33 +1,101 @@
 .head {
     position: fixed;
-    /* Stick to top */
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
     background-color: #ff6f61;
-    padding: 1rem 0;
     color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.nav {
+    padding: 1rem 1.5rem;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    gap: 5rem;
-    padding: 1rem 0;
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
-.head div {
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    color: white;
+}
+
+
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
     cursor: pointer;
+}
+
+
+.desktopNav {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    position: relative;
+    transition: all 0.3s ease;
+    padding: 4px 0;
+    white-space: nowrap;
+}
+
+.link:hover {
+    opacity: 0.9;
+}
+
+.link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.link:hover::after {
+    width: 100%;
+}
+
+
+.mobileNav {
+    display: flex;
+    flex-direction: column;
+    background-color: #ff6f61;
+    padding: 1rem 1.5rem;
+    position: absolute;
+    top: 70px;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.mobileNav .link {
+    padding: 0.75rem 0;
+    font-size: 1rem;
+    width: 100%;
+    text-align: left;
+}
+
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        width: auto;
+    }
+
+    .desktopNav {
+        display: none;
+    }
 }

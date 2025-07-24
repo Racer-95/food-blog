@@ -1,55 +1,152 @@
 .line {
-    text-align: center;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-  }
-
-
-.main {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 4rem 2rem;
-    flex-wrap: wrap;
-    background-color: rgba(243, 238, 230, 0.95);
-    margin-top: 4rem;
-    margin-bottom: 6rem;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    border-radius: 12px;
-  }
-
-
-.main h1 {
-    max-width: 600px;
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #333;
-  }
-  
-  .main div {
-    flex: 1;
-  }
-
-.slide {
-    background-color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; 
-    padding: 0.5rem 2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  padding: 2rem;
+  text-align: center;
+  color: #2c3e50;
 }
 
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 6rem;
+  background: #fff8f0;
+  flex-wrap: wrap;
+}
+
+.main h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.4;
+  max-width: 500px;
+}
+
+.main img {
+  max-width: 100%;
+  border-radius: 12px;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Slide section */
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 6rem;
+  background-color: white;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.slide h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #3c2f2f;
+}
+
+.slide button {
+  background-color: #ff914d;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.slide button:hover {
+  background-color: #ff7b2e;
+}
+
+/* Cards */
 .cardrow {
-  display:flex;
-  flex-direction: row;
-  gap: 1rem;
-  background-color:rgb(255, 255, 255);
-  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 4rem 2rem;
+  flex-wrap: wrap;
+  background: #ffffff;
 }
 
 .card {
   background-color: rgba(255, 228, 196, 0.536);
-  padding: 1rem 1rem;
   border-radius: 12px;
-  line-height: 25px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card h3 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #333;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+
+  .main,
+  .slide {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem;
+  }
+
+  .main h1,
+  .slide h2 {
+    font-size: 2rem;
+  }
+
+  .slide button {
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .line {
+    font-size: 1.5rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .main h1,
+  .slide h2 {
+    font-size: 1.6rem;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 90%;
+  }
+
+  .cardrow {
+    padding: 2rem 1rem;
+    gap: 1.5rem;
+  }
+
+  .slide button {
+    width: 100%;
+    padding: 0.75rem;
+  }
 }
